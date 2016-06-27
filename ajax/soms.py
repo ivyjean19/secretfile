@@ -19,7 +19,7 @@ def getDF():
   #  ms1 = '111'
    # ms2 = '110'
     # m ="m"
-    engine = create_engine('mysql+pymysql://root:senslope@127.0.0.1/senslopedb')
+    engine = create_engine('mysql+mysqldb://root:senslope@127.0.0.1/senslopedb')
     # query = "select timestamp, mval1 from senslopedb.%s%s where timestamp between '%s' and '%s'" % (site,m ,fdate ,tdate)
     query ="select timestamp,mval1,mval2 from senslopedb.%s where msgid = '%s' or msgid = '%s' and timestamp between '%s' and '%s'"% (site,ms1,ms2,fdate ,tdate)
     df = pd.io.sql.read_sql(query,engine)

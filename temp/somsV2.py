@@ -16,10 +16,10 @@ def getDF():
         fdate = sys.argv[2]
         tdate = sys.argv[3]
         nid = sys.argv[4]
-#site = 'agbsb'
-#fdate = '2016-04-10'
-#tdate = '2016-04-11'
-#nid = '2'
+#        site = 'agbsb'
+#        fdate = '2016-04-10'
+#        tdate = '2016-04-11'
+#        nid = '2'
         df= CSR.getsomsrawdata(site+'m',nid,fdate,tdate)
         
         

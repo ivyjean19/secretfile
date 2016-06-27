@@ -15,7 +15,7 @@ curOS = platform.system()
 if curOS == "Windows":
     import MySQLdb as mysqlDriver
 elif curOS == "Linux":
-    import pymysql as mysqlDriver
+    import mysqldb as mysqlDriver
 
 # Scripts for connecting to local database
 # Needs config file: server-config.txt

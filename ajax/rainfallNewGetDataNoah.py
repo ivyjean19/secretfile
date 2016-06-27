@@ -25,7 +25,7 @@ def getDF():
     # df = df.set_index(['dateTimeRead'])
     # df.index = pd.to_datetime(df.index)
 
-    engine = create_engine('mysql+pymysql://root:senslope@127.0.0.1/senslopedb')
+    engine = create_engine('mysql+mysqldb://root:senslope@127.0.0.1/senslopedb')
 
     #Changed date difference is 1 day or 24 hours
     query = "select * from senslopedb.rain_noah_%s where timestamp between '%s' and  '%s'" % (rsite , fdate, tdate)
